@@ -15,13 +15,13 @@ export default class SignUp extends Component {
     e.preventDefault();
     const { fname, lname, email, password} = this.state;
     console.log(fname, lname, email, password);
-    fetch("https://localhost:5000/register", {
+    fetch("http://localhost:5000/register", {
       method: "POST",
       crossDomain: true,
       headers:{
         "Content-Type": "application/json",
         Accept: "application/json",
-        "Access-Conrol-Allow-Origin": "*",
+        
       },
       body: JSON.stringify({
         fname,
